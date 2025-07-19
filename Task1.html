@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Mood Checker</title>
+    <script src="TASKJS.js" defer></script>
+  <style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #d0eaff, #ffffff);
+    padding: 40px;
+    text-align: center;
+    color: #222;
+  }
+  input, select, button {
+    padding: 10px 14px;
+    margin: 10px 0;
+    background-color: #e7f0fb;
+    border: 1.5px solid #a9c9f3;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 220px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    outline: none;
+  }
+  input:focus, select:focus {
+    border-color: #4285f4;
+    box-shadow: 0 0 8px rgba(66, 133, 244, 0.4);
+    background-color: #fff;
+  }
+  button {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    width: 150px;
+    margin-top: 20px;
+  }
+  button:hover {
+    background-color: #357ae8;
+  }
+  .result {
+    margin-top: 30px;
+    font-weight: bold;
+    color: #333;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f7fbff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(66, 133, 244, 0.2);
+    text-align: left;
+  }
+  label {
+    font-weight: 600;
+    display: block;
+    margin-top: 20px;
+  }
+</style>
+
+<body>
+
+  <h1>🌦️ Mood & Weather Checker</h1>
+
+  <label for="temp">Temperature (°C):</label>
+  <input type="number" id="temp" placeholder="Enter temperature">
+
+  <label for="weather">Weather:</label>
+  <select id="weather">
+    <option value="sunny">Sunny</option>
+    <option value="cloudy">Cloudy</option>
+    <option value="rainy">Rainy</option>
+    <option value="cold">Cold</option>
+  </select>
+
+  <label for="mood">Your mood:</label>
+  <input type="text" id="mood" placeholder="How are you feeling?">
+
+  <label for="drink">Your drink:</label>
+  <input type="text" id="drink" placeholder="Favorite drink?">
+
+  <button onclick="analyze()">Analyze Mood</button>
+
+  <div class="result" id="output"></div>
+
+
+
+
+</body>
+</html>
+
+
